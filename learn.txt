@@ -1,0 +1,104 @@
+const items = {
+    food: 1000,
+    drinks: 10
+};
+// this is how we create objects
+
+let cart = 0;
+// we usually use let instead of var because of scoping
+
+
+// since es6 is famous in present environment
+// i am gonna use arrow function
+let addItem = (item) => {
+    return cart + item;
+}
+
+function addToCart(item) {
+    cart = addItem(item);
+}
+
+addToCart(items.food);
+
+console.log("cart: ", cart);
+
+
+
+// DOM(dOCUMENT OBJECT model)
+// here we manipulate(change) the html using the javascipt
+// 1) how to access html elements using javascipt
+// 2) how to modify html or any styling through javascipt
+
+
+// there 3 types of selectors in css
+// 1) id 2) class 3)element
+
+// we can select multiple elements throgh dom 
+// but with query selector we only get the first tag
+// eg if there is 3 div it will select only the 1st div thats it whereas dom selects all tags specified
+
+
+// .operator is used to access the methods of object
+
+
+// we can style the html by variable.styles = "some proprty";
+// we can change the text using variable.innerHTML tag
+
+
+//WE CAN ALSO CREATE THE THE LIST AND ADD IT TO THE RESPECTIVE LINE USING
+
+let element = document.querySelector('ul');
+
+//here i create a new element
+
+let new_element = document.createElement('li')
+
+// and then i created an item 
+let new_text = document.createTextNode("item");
+
+// and next i will join text with list
+
+new_element.appendChild(new_text);
+// here i have added the item to the lisr 
+
+// the i need to add it to the ul
+element.appendChild(new_element);
+
+
+
+day 5
+
+// attibutes give special properties to the elements
+events in javascipt
+process of handling event is called event handling
+eg: onclick mouseover keyup keydown
+
+    <
+    h1 onclick = "this.innerHTML='HEY DUDE' " > cicl hre < /h1>
+    // IF I PRESS ON THE H1 IT GIVES HEY DUDE
+
+// I CAN ALSO THIS JS FILE by function
+function changeText(id) {
+    this.innerHTML = "HEY DUDE";
+}
+// and make
+onclick = "changeText(this)"
+
+
+// another example 
+// on clicking time and button there in built functn which shows date and time
+
+<
+button onclick = "display()" > time & date ? < /button> <
+    p > id = "test" ? < /p>
+
+function display() {
+    document.getElementById("test").innerHTML = Date();
+}
+
+time & date ?
+    ?
+
+    then
+if i click on button ? changes to
+Tue Feb 01 2022 23: 32: 26 GMT + 0530(India Standard Time)
